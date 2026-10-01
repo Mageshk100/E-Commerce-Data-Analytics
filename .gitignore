@@ -1,0 +1,39 @@
+# Environments & Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pytest_cache/
+
+# Data Files (Avoid committing large raw and processed datasets)
+data/raw/*.zip
+data/raw/*.xlsx
+data/raw/*.csv
+data/processed/*.csv
+data/processed/*.parquet
+data/processed/*.db
+*.db
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Sensitive Credentials & Local Configuration
+.env
+*.env
+config.local.json
+secrets.toml
+
+# IDE & OS Files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs & Temporary Files
+*.log
+scratch/
+tmp/

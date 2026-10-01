@@ -1,0 +1,19 @@
+# Core Data Analytics Stack
+pandas>=2.2.0
+numpy>=1.26.0
+openpyxl>=3.1.2
+
+# Database Connectivity
+SQLAlchemy>=2.0.0
+pymysql>=1.1.0
+cryptography>=42.0.0
+
+# Interactive Dashboard & Visualization
+streamlit>=1.35.0
+plotly>=5.20.0
+
+# HTTP & Data Utilities
+requests>=2.31.0
+
+# Testing & Quality Assurance
+pytest>=8.0.0

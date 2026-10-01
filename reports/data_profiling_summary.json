@@ -1,0 +1,301 @@
+{
+  "metadata": {
+    "dataset_name": "UCI Online Retail Dataset",
+    "source": "https://archive.ics.uci.edu/dataset/352/online+retail",
+    "profiling_timestamp": "2026-10-01T21:45:14.314056",
+    "total_rows": 541909,
+    "total_columns": 8
+  },
+  "columns": {
+    "InvoiceNo": {
+      "dtype": "str",
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 25900,
+      "sample_values": [
+        "536365",
+        "536365",
+        "536365"
+      ]
+    },
+    "StockCode": {
+      "dtype": "str",
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 4070,
+      "sample_values": [
+        "85123A",
+        "71053",
+        "84406B"
+      ]
+    },
+    "Description": {
+      "dtype": "object",
+      "missing_count": 1454,
+      "missing_pct": 0.2683,
+      "unique_count": 4223,
+      "sample_values": [
+        "WHITE HANGING HEART T-LIGHT HOLDER",
+        "WHITE METAL LANTERN",
+        "CREAM CUPID HEARTS COAT HANGER"
+      ]
+    },
+    "Quantity": {
+      "dtype": "int64",
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 722,
+      "sample_values": [
+        "6",
+        "6",
+        "8"
+      ]
+    },
+    "InvoiceDate": {
+      "dtype": "datetime64[us]",
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 23260,
+      "sample_values": [
+        "2010-12-01 08:26:00",
+        "2010-12-01 08:26:00",
+        "2010-12-01 08:26:00"
+      ]
+    },
+    "UnitPrice": {
+      "dtype": "float64",
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 1630,
+      "sample_values": [
+        "2.55",
+        "3.39",
+        "2.75"
+      ]
+    },
+    "CustomerID": {
+      "dtype": "float64",
+      "missing_count": 135080,
+      "missing_pct": 24.9267,
+      "unique_count": 4372,
+      "sample_values": [
+        "17850.0",
+        "17850.0",
+        "17850.0"
+      ]
+    },
+    "Country": {
+      "dtype": "str",
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "unique_count": 38,
+      "sample_values": [
+        "United Kingdom",
+        "United Kingdom",
+        "United Kingdom"
+      ]
+    }
+  },
+  "duplicates": {
+    "duplicate_rows_count": 5268,
+    "duplicate_rows_pct": 0.9721
+  },
+  "unique_entities": {
+    "unique_invoices": 25900,
+    "unique_stock_codes": 4070,
+    "unique_descriptions": 4223,
+    "unique_customers": 4372,
+    "unique_countries": 38
+  },
+  "temporal": {
+    "min_date": "2010-12-01 08:26:00",
+    "max_date": "2011-12-09 12:50:00",
+    "date_range_days": 373,
+    "monthly_distribution": {
+      "2010-12": 42481,
+      "2011-01": 35147,
+      "2011-02": 27707,
+      "2011-03": 36748,
+      "2011-04": 29916,
+      "2011-05": 37030,
+      "2011-06": 36874,
+      "2011-07": 39518,
+      "2011-08": 35284,
+      "2011-09": 50226,
+      "2011-10": 60742,
+      "2011-11": 84711,
+      "2011-12": 25525
+    }
+  },
+  "cancellations": {
+    "cancellation_rows": 9288,
+    "cancellation_pct": 1.7139,
+    "unique_cancellation_invoices": 3836,
+    "c_quantities_negative": 9288,
+    "c_quantities_non_negative": 0
+  },
+  "negative_quantities": {
+    "negative_qty_rows": 10624,
+    "negative_qty_pct": 1.9605,
+    "neg_qty_not_c": 1336,
+    "neg_qty_not_c_unique_invoices": 1336,
+    "neg_qty_not_c_samples": {
+      "nan": 862,
+      "check": 120,
+      "damages": 45,
+      "damaged": 42,
+      "?": 41,
+      "sold as set on dotcom": 20,
+      "Damaged": 14,
+      "thrown away": 9,
+      "Unsaleable, destroyed.": 9,
+      "??": 7
+    }
+  },
+  "pricing_anomalies": {
+    "zero_price_rows": 2515,
+    "zero_price_pct": 0.4641,
+    "negative_price_rows": 2,
+    "negative_price_records": [
+      {
+        "InvoiceNo": "A563186",
+        "StockCode": "B",
+        "Description": "Adjust bad debt",
+        "UnitPrice": -11062.06,
+        "Quantity": 1
+      },
+      {
+        "InvoiceNo": "A563187",
+        "StockCode": "B",
+        "Description": "Adjust bad debt",
+        "UnitPrice": -11062.06,
+        "Quantity": 1
+      }
+    ]
+  },
+  "missing_customer_analysis": {
+    "missing_customer_rows": 135080,
+    "missing_customer_pct": 24.9267,
+    "missing_customer_unique_invoices": 3710,
+    "missing_cust_total_value": 1447682.12,
+    "total_raw_line_value": 9747747.93,
+    "missing_cust_value_share_pct": 14.85
+  },
+  "numerical_statistics": {
+    "Quantity": {
+      "count": 541909,
+      "mean": 9.5522,
+      "std": 218.0812,
+      "min": -80995.0,
+      "p01": -2.0,
+      "p05": 1.0,
+      "p25": 1.0,
+      "median": 3.0,
+      "p75": 10.0,
+      "p95": 29.0,
+      "p99": 100.0,
+      "max": 80995.0
+    },
+    "UnitPrice": {
+      "count": 541909,
+      "mean": 4.6111,
+      "std": 96.7599,
+      "min": -11062.06,
+      "p01": 0.19,
+      "p05": 0.42,
+      "p25": 1.25,
+      "median": 2.08,
+      "p75": 4.13,
+      "p95": 9.95,
+      "p99": 18.0,
+      "max": 38970.0
+    },
+    "LineValue_Raw": {
+      "count": 541909,
+      "sum": 9747747.93,
+      "mean": 17.9878,
+      "std": 378.8108,
+      "min": -168469.6,
+      "p01": -6.58,
+      "median": 9.75,
+      "p99": 180.0,
+      "max": 168469.6
+    }
+  },
+  "top_countries": [
+    {
+      "Country": "United Kingdom",
+      "transactions": 495478,
+      "unique_invoices": 23494,
+      "total_qty": 4263829
+    },
+    {
+      "Country": "Germany",
+      "transactions": 9495,
+      "unique_invoices": 603,
+      "total_qty": 117448
+    },
+    {
+      "Country": "France",
+      "transactions": 8557,
+      "unique_invoices": 461,
+      "total_qty": 110480
+    },
+    {
+      "Country": "EIRE",
+      "transactions": 8196,
+      "unique_invoices": 360,
+      "total_qty": 142637
+    },
+    {
+      "Country": "Spain",
+      "transactions": 2533,
+      "unique_invoices": 105,
+      "total_qty": 26824
+    },
+    {
+      "Country": "Netherlands",
+      "transactions": 2371,
+      "unique_invoices": 101,
+      "total_qty": 200128
+    },
+    {
+      "Country": "Belgium",
+      "transactions": 2069,
+      "unique_invoices": 119,
+      "total_qty": 23152
+    },
+    {
+      "Country": "Switzerland",
+      "transactions": 2002,
+      "unique_invoices": 74,
+      "total_qty": 30325
+    },
+    {
+      "Country": "Portugal",
+      "transactions": 1519,
+      "unique_invoices": 71,
+      "total_qty": 16180
+    },
+    {
+      "Country": "Australia",
+      "transactions": 1259,
+      "unique_invoices": 69,
+      "total_qty": 83653
+    }
+  ],
+  "non_standard_stock_codes": {
+    "POST": 1256,
+    "DOT": 710,
+    "M": 571,
+    "D": 77,
+    "S": 63,
+    "AMAZONFEE": 34,
+    "CRUK": 16,
+    "DCGSSGIRL": 13,
+    "DCGSSBOY": 11,
+    "PADS": 4,
+    "B": 3,
+    "m": 1
+  }
+}
